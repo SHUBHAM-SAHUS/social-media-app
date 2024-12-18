@@ -1,5 +1,138 @@
 {
-  "users": [],
-  "posts": [],
-  "comments": []
+  "users": [
+    {
+      "id": "58b3",
+      "username": "user1",
+      "password": "123456",
+      "email": "user1@gmail.com",
+      "fullName": "user1",
+      "status": "travelling",
+      "profile_image": "https://via.placeholder.com/150",
+      "connections": []
+    },
+    {
+      "id": "307f",
+      "username": "user3",
+      "password": "123456",
+      "email": "user3@gmail.com",
+      "fullName": "user3",
+      "status": "dnd",
+      "profile_image": "https://via.placeholder.com/150",
+      "connections": ["58b3", "df66"]
+    },
+    {
+      "id": "b5cc",
+      "username": "user4",
+      "password": "123456",
+      "email": "user4@gmail.com",
+      "fullName": "user4",
+      "status": "busy",
+      "profile_image": "https://via.placeholder.com/150",
+      "connections": ["58b3", "df66", "307f"]
+    },
+    {
+      "id": "53cd",
+      "username": "user2",
+      "password": "123456",
+      "email": "user2@gmail.com",
+      "fullName": "user2",
+      "status": "busy",
+      "profile_image": "https://via.placeholder.com/150",
+      "connections": ["58b3", "307f", "b5cc"]
+    }
+  ],
+  "posts": [
+    {
+      "id": "d0c2",
+      "user_id": "58b3",
+      "content": "testuser",
+      "createdAt": "2024-12-18T12:31:53.840Z",
+      "comments": []
+    },
+    {
+      "id": "4434",
+      "user_id": "58b3",
+      "content": "testuser2",
+      "createdAt": "2024-12-18T12:32:03.904Z",
+      "comments": []
+    },
+    {
+      "id": "751c",
+      "user_id": "df66",
+      "content": "hbhbf",
+      "createdAt": "2024-12-18T12:33:10.563Z",
+      "comments": []
+    },
+    {
+      "id": "86e9",
+      "user_id": "b5cc",
+      "content": "The posts endpoint offers a dataset of sample blog post data, including details like titles, body content, user IDs, and tags, useful for testing and prototyping content management and social media features in web applications.",
+      "createdAt": "2024-12-18T12:41:21.616Z",
+      "comments": []
+    },
+    {
+      "id": "cff6",
+      "user_id": "b5cc",
+      "content": "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
+      "createdAt": "2024-12-18T12:42:10.737Z",
+      "comments": []
+    },
+    {
+      "id": "52e4",
+      "user_id": "b5cc",
+      "content": "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
+      "createdAt": "2024-12-18T12:42:15.785Z",
+      "comments": []
+    }
+  ],
+  "comments": [
+    {
+      "id": "1675",
+      "post_id": "751c",
+      "user_id": "df66",
+      "content": "hello"
+    },
+    {
+      "id": "a19c",
+      "post_id": "86e9",
+      "user_id": "b5cc",
+      "content": "nice"
+    },
+    {
+      "id": "cb28",
+      "post_id": "86e9",
+      "user_id": "b5cc",
+      "content": "cool"
+    },
+    {
+      "id": "b6d8",
+      "post_id": "cff6",
+      "user_id": "b5cc",
+      "content": "looks good"
+    },
+    {
+      "id": "013a",
+      "post_id": "86e9",
+      "user_id": "b5cc",
+      "content": "nice"
+    },
+    {
+      "id": "6aba",
+      "post_id": "52e4",
+      "user_id": "b5cc",
+      "content": "nice"
+    },
+    {
+      "id": "8485",
+      "post_id": "cff6",
+      "user_id": "b5cc",
+      "content": "nice"
+    },
+    {
+      "id": "fd96",
+      "post_id": "86e9",
+      "user_id": "b5cc",
+      "content": "nice"
+    }
+  ]
 }
