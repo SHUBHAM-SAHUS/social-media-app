@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 
 const Home: React.FC = () => {
@@ -7,7 +8,6 @@ const Home: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
         textAlign: 'center',
         flexDirection: 'column',
       }}
@@ -20,10 +20,10 @@ const Home: React.FC = () => {
 export default Home;
 
 // For SEO
-export function generateMetadata(): { title: string; description: string } {
-  return {
-    title: 'Repo List',
-    description:
-      'Browse a list of repositories, including their details such as name, language, and more.',
-  };
-}
+// export function generateMetadata(): { title: string; description: string } {
+//   return {
+//     title: 'Repo List',
+//     description:
+//       'Browse a list of repositories, including their details such as name, language, and more.',
+//   };
+// }

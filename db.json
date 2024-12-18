@@ -1,138 +1,122 @@
 {
   "users": [
     {
-      "id": "58b3",
+      "id": "c2c8",
       "username": "user1",
       "password": "123456",
       "email": "user1@gmail.com",
       "fullName": "user1",
-      "status": "travelling",
+      "status": "busy",
       "profile_image": "https://via.placeholder.com/150",
       "connections": []
     },
     {
-      "id": "307f",
-      "username": "user3",
-      "password": "123456",
-      "email": "user3@gmail.com",
-      "fullName": "user3",
-      "status": "dnd",
-      "profile_image": "https://via.placeholder.com/150",
-      "connections": ["58b3", "df66"]
-    },
-    {
-      "id": "b5cc",
-      "username": "user4",
-      "password": "123456",
-      "email": "user4@gmail.com",
-      "fullName": "user4",
-      "status": "busy",
-      "profile_image": "https://via.placeholder.com/150",
-      "connections": ["58b3", "df66", "307f"]
-    },
-    {
-      "id": "53cd",
+      "id": "5916",
       "username": "user2",
       "password": "123456",
       "email": "user2@gmail.com",
       "fullName": "user2",
       "status": "busy",
       "profile_image": "https://via.placeholder.com/150",
-      "connections": ["58b3", "307f", "b5cc"]
+      "connections": [
+        "c2c8"
+      ]
+    },
+    {
+      "id": "f085",
+      "username": "user3",
+      "password": "@Shubham1396",
+      "email": "user3@gmail.com",
+      "fullName": "user3",
+      "status": "busy",
+      "profile_image": "https://via.placeholder.com/150",
+      "connections": [
+        "c2c8",
+        "5916"
+      ]
+    },
+    {
+      "id": "6c94",
+      "username": "user4",
+      "password": "123456",
+      "email": "user@gmail.com",
+      "fullName": "user4",
+      "status": "available",
+      "profile_image": "https://via.placeholder.com/150",
+      "connections": [
+        "c2c8",
+        "5916",
+        "f085"
+      ]
     }
   ],
   "posts": [
     {
-      "id": "d0c2",
-      "user_id": "58b3",
-      "content": "testuser",
-      "createdAt": "2024-12-18T12:31:53.840Z",
+      "id": "7d52",
+      "user_id": "6c94",
+      "content": "survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "createdAt": "2024-12-18T19:00:48.205Z",
       "comments": []
     },
     {
-      "id": "4434",
-      "user_id": "58b3",
-      "content": "testuser2",
-      "createdAt": "2024-12-18T12:32:03.904Z",
+      "id": "86b2",
+      "user_id": "6c94",
+      "content": "survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "createdAt": "2024-12-18T19:00:52.737Z",
       "comments": []
     },
     {
-      "id": "751c",
-      "user_id": "df66",
-      "content": "hbhbf",
-      "createdAt": "2024-12-18T12:33:10.563Z",
+      "id": "47b7",
+      "user_id": "6c94",
+      "content": "survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the ",
+      "createdAt": "2024-12-18T19:01:03.163Z",
       "comments": []
     },
     {
-      "id": "86e9",
-      "user_id": "b5cc",
-      "content": "The posts endpoint offers a dataset of sample blog post data, including details like titles, body content, user IDs, and tags, useful for testing and prototyping content management and social media features in web applications.",
-      "createdAt": "2024-12-18T12:41:21.616Z",
+      "id": "81a6",
+      "user_id": "6c94",
+      "content": "1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "createdAt": "2024-12-18T19:01:12.129Z",
       "comments": []
     },
     {
-      "id": "cff6",
-      "user_id": "b5cc",
-      "content": "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
-      "createdAt": "2024-12-18T12:42:10.737Z",
-      "comments": []
-    },
-    {
-      "id": "52e4",
-      "user_id": "b5cc",
-      "content": "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
-      "createdAt": "2024-12-18T12:42:15.785Z",
+      "id": "8ca2",
+      "user_id": "6c94",
+      "content": "survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "createdAt": "2024-12-18T19:01:18.918Z",
       "comments": []
     }
   ],
   "comments": [
     {
-      "id": "1675",
-      "post_id": "751c",
-      "user_id": "df66",
-      "content": "hello"
-    },
-    {
-      "id": "a19c",
-      "post_id": "86e9",
-      "user_id": "b5cc",
-      "content": "nice"
-    },
-    {
-      "id": "cb28",
-      "post_id": "86e9",
-      "user_id": "b5cc",
+      "id": "1182",
+      "post_id": "8ca2",
+      "user_id": "6c94",
       "content": "cool"
     },
     {
-      "id": "b6d8",
-      "post_id": "cff6",
-      "user_id": "b5cc",
-      "content": "looks good"
+      "id": "18ff",
+      "post_id": "8ca2",
+      "user_id": "6c94",
+      "content": "great"
     },
     {
-      "id": "013a",
-      "post_id": "86e9",
-      "user_id": "b5cc",
-      "content": "nice"
+      "id": "51fe",
+      "post_id": "81a6",
+      "user_id": "6c94",
+      "content": "good"
     },
     {
-      "id": "6aba",
-      "post_id": "52e4",
-      "user_id": "b5cc",
-      "content": "nice"
+      "id": "7641",
+      "post_id": "47b7",
+      "user_id": "6c94",
+      "content": "cool"
     },
     {
-      "id": "8485",
-      "post_id": "cff6",
-      "user_id": "b5cc",
-      "content": "nice"
-    },
-    {
-      "id": "fd96",
-      "post_id": "86e9",
-      "user_id": "b5cc",
-      "content": "nice"
+      "id": "672d",
+      "post_id": "86b2",
+      "user_id": "6c94",
+      "content": "good"
     }
   ]
 }

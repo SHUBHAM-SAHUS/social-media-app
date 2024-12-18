@@ -11,25 +11,29 @@ import {
   ListItem,
   Divider,
 } from '@mui/material';
-import { useCreateComments, useGetFetchPosts } from '@/hooks/API';
+import {
+  useCreateComments,
+  useGetFetchPosts,
+  useGetUserPost,
+} from '@/hooks/API';
+// import { useGetUserPost } from '@/api-services';
 
 const PostDetails: React.FC<any> = ({ user }) => {
   const [search, setSearch] = useState<string>('');
   const [comments, setComments] = useState<{ [key: string]: string }>({});
   const [updatedPosts, setUpdatedPosts] = useState<any[]>([]);
-
-  const { posts, isLoading } = useGetFetchPosts(user?.id ?? '');
+  const { posts, isLoading } = useGetUserPost(user?.id ?? '');
   const { createComment, createCommentIsLoading } = useCreateComments();
 
   useEffect(() => {
-    if (posts) {
+    if (JSON.stringify(posts) !== JSON.stringify(updatedPosts)) {
       setUpdatedPosts(posts);
     }
   }, [posts]);
 
   const handlePostComment = (postId: string) => {
     const comment = comments[postId];
-    if (!comment.trim()) return;
+    if (!comment?.trim()) return;
 
     const payload = {
       post_id: postId,
@@ -93,7 +97,7 @@ const PostDetails: React.FC<any> = ({ user }) => {
       }}
     >
       <Typography
-        variant="h5"
+        variant="h6"
         sx={{
           marginBottom: 2,
           color: '#000',
@@ -132,11 +136,11 @@ const PostDetails: React.FC<any> = ({ user }) => {
               }}
             >
               <Typography
-                variant="h6"
                 sx={{
                   color: '#000',
                   marginBottom: 1,
-                  fontWeight: 600,
+                  fontWeight: 500,
+                  fontSize: '16px',
                 }}
               >
                 {post.content}
@@ -191,7 +195,7 @@ const PostDetails: React.FC<any> = ({ user }) => {
                           fontSize: '0.875rem',
                         }}
                       >
-                        {new Date(comment.createdAt).toLocaleString()}
+                        {/* {new Date(comment.createdAt).toLocaleString()} */}
                       </Typography>
                     </Box>
                     <Typography
@@ -234,8 +238,14 @@ const PostDetails: React.FC<any> = ({ user }) => {
                 <Button
                   variant="contained"
                   sx={{
-                    backgroundColor: '#1976d2',
-                    '&:hover': { backgroundColor: '#155a9d' },
+                    backgroundColor: '#212a31',
+                    textTransform: 'capitalize',
+                    fontWeight: '500',
+                    '&:hover': {
+                      backgroundColor: '#d3d9d4',
+                      textTransform: 'capitalize',
+                      color: '#212a31',
+                    },
                   }}
                   onClick={() => handlePostComment(post.id)}
                   disabled={createCommentIsLoading}

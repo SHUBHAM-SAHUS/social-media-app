@@ -41,7 +41,6 @@ const CreatePostTemplate = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '100vh',
         padding: 2,
         backgroundColor: '#f4f4f4',
       }}
@@ -104,13 +103,15 @@ const CreatePostTemplate = () => {
             <Button
               type="submit"
               variant="contained"
-              color="primary"
+              // color="212a31"
+              // sx={{ backgroundColor: '212a31' }}
               disabled={createPostIsLoading || !content.trim()}
               sx={{
                 padding: '8px 16px',
                 fontWeight: 600,
                 fontSize: '1rem',
                 textTransform: 'none',
+                backgroundColor: '212a31',
               }}
             >
               {createPostIsLoading ? (

@@ -166,6 +166,8 @@ const LoginTemplate: React.FC = () => {
               fontWeight: 600,
               textTransform: 'none',
               fontSize: '1rem',
+              backgroundColor: '#212a31 !important',
+              color: 'white',
             }}
           >
             {isLoading ? (

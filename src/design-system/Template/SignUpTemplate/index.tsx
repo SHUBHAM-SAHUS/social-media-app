@@ -97,7 +97,6 @@ const SignUpTemplate: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '100vh',
         backgroundColor: '#f4f4f4',
         padding: 2,
       }}
@@ -245,6 +244,11 @@ const SignUpTemplate: React.FC = () => {
               sx={{
                 fontWeight: 600,
                 textTransform: 'none',
+                backgroundColor: '#212a31',
+                '&:hover': {
+                  backgroundColor: '#d3d9d4',
+                  color: '#212a31',
+                },
               }}
             />
           </Stack>

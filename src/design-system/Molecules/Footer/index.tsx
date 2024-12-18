@@ -5,8 +5,8 @@ const Footer: React.FC = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#3f51b5', // Darker color for a modern look
-        color: '#ffffff',
+        backgroundColor: '#d3d9d4',
+        color: '#212a31',
         width: '100%',
         position: 'fixed',
         bottom: '0',

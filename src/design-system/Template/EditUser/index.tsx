@@ -284,6 +284,12 @@ const EditProfile: React.FC = () => {
                 fontWeight: 600,
                 fontSize: '1rem',
                 textTransform: 'none',
+                color: 'white',
+                backgroundColor: '#212a31',
+                '&:hover': {
+                  backgroundColor: '#d3d9d4',
+                  color: '#212a31',
+                },
               }}
             >
               {updatePostIsLoading ? (

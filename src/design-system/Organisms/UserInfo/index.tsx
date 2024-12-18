@@ -30,11 +30,11 @@ const UserInfo: React.FC<any> = ({ user }) => {
   return (
     <Box
       sx={{
-        padding: 3,
+        padding: 2,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        border: '1px solid #a17fff',
+        border: '1px solid #212a31',
         borderRadius: '20px',
         maxWidth: '400px',
         margin: '0 auto',
@@ -98,8 +98,11 @@ const UserInfo: React.FC<any> = ({ user }) => {
           onClick={handleEditClick}
           sx={{
             flex: 1,
-            backgroundColor: '#a17fff',
-            '&:hover': { backgroundColor: '#8e6ce8' },
+            backgroundColor: '#212a31',
+            color: 'white',
+            textTransform: 'capitalize',
+            fontWeight: '500',
+            '&:hover': { backgroundColor: 'white', color: '#212a31' },
           }}
         >
           Edit Account
@@ -110,8 +113,11 @@ const UserInfo: React.FC<any> = ({ user }) => {
           onClick={handelAddPost}
           sx={{
             flex: 1,
-            backgroundColor: '#ff8a65',
-            '&:hover': { backgroundColor: '#e76b48' },
+            backgroundColor: '#212a31',
+            color: 'white',
+            textTransform: 'capitalize',
+            fontWeight: '500',
+            '&:hover': { backgroundColor: 'white', color: '#212a31' },
           }}
         >
           Add Post

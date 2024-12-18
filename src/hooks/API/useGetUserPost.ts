@@ -1,80 +1,47 @@
-'use client';
-
 import { PostAPIServices } from '@/api-services';
 import CommentAPIServices from '@/api-services/CommentAPIService';
-import { SUCCESS_STATUS_CODE } from '@/utils';
 import { useQuery } from 'react-query';
-import { toast } from 'react-toastify';
 
-interface PostWithComments {
-  id: string;
-  title: string;
-  content: string;
-  comments?: Comment[];
-}
+const useGetUserPost = (userId: string) => {
+  const fetchPostsWithComments = async (): Promise<any[]> => {
+    if (!userId) return [];
 
-interface Comment {
-  id: string;
-  postId: string;
-  text: string;
-}
-
-const useGetFetchPosts = (userId: string) => {
-  // Fetch posts
-  const {
-    data: postsData,
-    isLoading: isPostsLoading,
-    error: postsError,
-    refetch: refetchPosts,
-  } = useQuery(['userPosts', userId], () => PostAPIServices.userPost(userId), {
-    enabled: !!userId, // Fetch only if userId exists
-    onError: (error: any) => {
-      toast.error(`Failed to fetch posts: ${error.message}`);
-    },
-  });
-
-  // Combine posts with comments
-  const fetchPostsWithComments = async (): Promise<PostWithComments[]> => {
     try {
-      if (!postsData || !Array.isArray(postsData)) return [];
+      const posts = await PostAPIServices.userPost(userId);
 
-      // Attach comments to each post
+
       const postsWithComments = await Promise.all(
-        postsData.map(async (post: any) => {
+        posts.map(async (post: any) => {
           try {
-            const commentsResponse = await CommentAPIServices.commentForPost(
-              post.id,
-            );
-            const comments: Comment[] = await commentsResponse.json();
-
+            const comments = await CommentAPIServices.commentForPost(post.id);
             return { ...post, comments };
-          } catch (error) {
-            return { ...post, comments: [] };
+          } catch {
+            return { ...post, comments: [] }; // Default to empty comments on error
           }
         }),
       );
 
       return postsWithComments;
-    } catch (error) {
-      toast.error('An error occurred while fetching posts with comments.');
-      return [];
+    } catch (error: any) {
+      throw error;
     }
   };
 
-  const { data: postsWithComments, isLoading: isCommentsLoading } = useQuery(
-    ['postsWithComments', userId],
-    fetchPostsWithComments,
-    {
-      enabled: !!postsData, // Fetch only after posts are fetched
-    },
-  );
+  const {
+    data: postsWithComments,
+    isLoading,
+    error,
+    refetch,
+  } = useQuery(['userPostsWithComments', userId], fetchPostsWithComments, {
+    enabled: !!userId, // Fetch only if userId exists
+  });
 
   return {
     posts: postsWithComments || [],
-    isLoading: isPostsLoading || isCommentsLoading,
-    error: postsError,
-    refetchPosts,
+    isLoading,
+    error,
+    refetch,
   };
 };
 
-export default useGetFetchPosts;
+export default useGetUserPost;

@@ -1,4 +1,4 @@
-import { API_ENDPOINTS, BASE_API_URL, Repo, RepoResponse } from '@/utils';
+import { API_ENDPOINTS, BASE_API_URL } from '@/utils';
 import CoreAPIService from './CoreAPIService';
 
 const {
@@ -11,7 +11,7 @@ const {
     GET_COMMENTS_FOR_POST,
   },
 } = API_ENDPOINTS;
-// ******  TODO: 'AUTH API SERVICES'********
+
 class CommentAPIService {
   private services: CoreAPIService;
 
@@ -19,15 +19,19 @@ class CommentAPIService {
     this.services = new CoreAPIService(baseURL as string);
   }
 
+  // Create a new comment
   createComment = async (data: any) => {
-    const endpoint = `${CREATE_COMMENT}`;
+    const endpoint = `${CREATE_COMMENT}`; // Correct string interpolation
     return this.services.post(endpoint, data);
   };
 
+  // Get comments for a specific post
   commentForPost = async (id: string) => {
-    const endpoint = `${GET_COMMENTS_FOR_POST}/${id}`;
+    const endpoint = `${GET_COMMENTS_FOR_POST}?post_id=${id}`; // Correct string interpolation
     return this.services.get<any>(endpoint);
   };
+
+  // Additional methods for other comment-related APIs can be added here
 }
 
 const CommentAPIServices = new CommentAPIService(BASE_API_URL);

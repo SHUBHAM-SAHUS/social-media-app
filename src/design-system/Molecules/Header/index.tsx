@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: '#3f51b5',
+        backgroundColor: '#212a31',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
       }}
     >
@@ -92,12 +92,11 @@ const Header: React.FC = () => {
                   onClick={handleLogout}
                   sx={{
                     backgroundColor: 'white',
-                    color: '#3f51b5',
+                    color: '#212a31',
                     fontWeight: 600,
                     textTransform: 'capitalize',
                     '&:hover': {
-                      backgroundColor: '#283593',
-                      color: 'white',
+                      backgroundColor: '#d3d9d4',
                     },
                   }}
                 >
@@ -118,7 +117,9 @@ const Header: React.FC = () => {
                       textTransform: 'capitalize',
                       fontWeight: 600,
                       '&:hover': {
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        '&:hover': {
+                          border: '1px solid rgb(255, 255, 255) !important',
+                        },
                       },
                     }}
                   >
@@ -134,7 +135,7 @@ const Header: React.FC = () => {
                       textTransform: 'capitalize',
                       fontWeight: 600,
                       '&:hover': {
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        border: '1px solid rgb(255, 255, 255) !important',
                       },
                     }}
                   >
